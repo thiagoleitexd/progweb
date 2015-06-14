@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="a descrição do seu site em no máximo 90 caracteres">
+        <meta name="keywords" content="escreva palavras-chaves curtas, máximo 150 caracteres">
+        <title>Título do Documento</title>
+    </head>
+    <body>
+
+
+
+<table border = '0'>
+    <tr>
+
+        <td>
+            <img src = 'raul.jpeg' width="55px" height="55px">
+            
+        </td>
+
+        <td>
+            <h1> Raul Seixas </h1>        
+        </td>
+
+   </tr>
+</table>
+
+    <p>            
+        Quero dizer agora o oposto do que eu disse antes </br>
+        Eu prefiro ser essa metamorfose ambulante </br>
+        Do que ter aquela velha opinião formada sobre tudo...</br>
+    </p>
+
+
+<table border=0>
+        <td>
+            <div id = 'contador' >
+            0 people like this
+            </div>
+         </td>
+
+         <td> 
+            <form name = 'contador' >
+                <input type = 'button' name = 'like' value = 'like'>
+            </form>
+          </td>
+</table>
+            
+        <p>Comentarios </p>
+            
+            <div name='comentario' id = 'comentario'>
+            <!--vazio -->
+             </div>
+             </br>
+<table>
+    <td>
+        <textarea name = 'area' id = 'area'></textarea>
+    </td>
+    <td>
+        <form name = 'coment' >
+            <input type = 'button' name = 'bcomentario' value = 'comentar' >
+        </form>
+    </td>
+</table>
+            <script>
+
+                    var CONT = 1;
+
+                document.contador.like.onclick = function like () {
+                        
+                        document.getElementById ('contador').innerHTML = CONT + " people like this";
+                        CONT = CONT +1;
+               }
+                
+                document.coment.bcomentario.onclick = function comentario () {
+
+                        // Buscar elemento pai
+                        var elemento_pai = document.getElementById("comentario");
+
+                        // Criar elemento
+                        var titulo = document.createElement('div');
+                        titulo.setAttribute( "style", "display:block;height:50px;background-color:#A68064; margin-bottom:10px;" );
+                        // Criar o nó de texto
+                        var texto = document.createTextNode(document.getElementById("area").value);
+
+                        // Anexar o nó de texto ao elemento h1
+                        titulo.appendChild(texto);
+
+                        // Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
+                        elemento_pai.appendChild(titulo);
+
+
+                }
+            </script>
+
+    </body>
+</html>
