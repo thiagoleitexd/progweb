@@ -20,7 +20,7 @@ $comentarios = $_GET["comentarios"];
 
 
 // Create connection
-$conexao = mysql_connect("localhost","root","");
+$conexao = mysql_connect("localhost","root","123");
 
 // Check connection
 if ($conexao->connect_error) {
